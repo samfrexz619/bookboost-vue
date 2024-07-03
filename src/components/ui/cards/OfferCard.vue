@@ -1,7 +1,7 @@
 <template>
-  <div class="w-full bg-black2 rounded-20 h-[380px] p-10">
-    <div class="w-16 h-16 rounded-2xl bg-pry items-center flex justify-center">
-      <img :src="imageUrl" alt="icons">
+  <div class="w-full bg-black2 rounded-20  h-350 p-7 lg:p-10">
+    <div class="w-12 h-12 lg:w-16 lg:h-16 rounded-2xl bg-pry items-center flex justify-center">
+      <img :src="imageUrl" alt="icons" class="lg:w-8 md:w-6 w-4">
     </div>
     <div>
       <h6 class="font-semibold text-xl pt-6 pb-2">

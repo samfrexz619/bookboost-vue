@@ -5,6 +5,28 @@ export interface Offer {
   image: string;
 }
 
+type PlanBenefits = {
+  id: string;
+  benefit: string;
+}
+export interface Plans {
+  id: string;
+  price: string;
+  descr: string;
+  planBenefits: PlanBenefits[];
+  plan: string;
+  btnTitle: string;
+  popular: boolean;
+}
+
+export interface Reviewers {
+  id: string;
+  name: string;
+  review: string;
+  image: string;
+  position: string;
+}
+
 export const offers = [
   {
     id: '1',
@@ -43,4 +65,208 @@ export const offers = [
     image: 'support'
   },
 
+]
+
+export const pricingPlans: Plans[] = [
+  {
+    id: '1',
+    price: '64',
+    descr: 'Perfect for using in a personal website or a client project.',
+    planBenefits: [
+      {
+        id: '1',
+        benefit: '1 User'
+      },
+      {
+        id: '2',
+        benefit: 'All UI components'
+      },
+      {
+        id: '3',
+        benefit: 'Lifetime access'
+      },
+      {
+        id: '4',
+        benefit: 'Free updates'
+      },
+      {
+        id: '5',
+        benefit: 'Use on 1 (one) project'
+      },
+      {
+        id: '6',
+        benefit: '3 Months support'
+      },
+    ],
+    plan: 'personal',
+    btnTitle: 'personal',
+    popular: false
+  },
+  {
+    id: '2',
+    price: '124',
+    descr: 'Perfect for using in a business website or a client project.',
+    planBenefits: [
+      {
+        id: '1',
+        benefit: '1 User'
+      },
+      {
+        id: '2',
+        benefit: 'All UI components'
+      },
+      {
+        id: '3',
+        benefit: 'Lifetime access'
+      },
+      {
+        id: '4',
+        benefit: 'Free updates'
+      },
+      {
+        id: '5',
+        benefit: 'Use on 1 (one) project'
+      },
+      {
+        id: '6',
+        benefit: '3 Months support'
+      },
+    ],
+    plan: 'business',
+    btnTitle: 'business',
+    popular: true
+  },
+  {
+    id: '3',
+    price: '200',
+    descr: 'Perfect for using in a team business or a client Business.',
+    planBenefits: [
+      {
+        id: '1',
+        benefit: '1 User'
+      },
+      {
+        id: '2',
+        benefit: 'All UI components'
+      },
+      {
+        id: '3',
+        benefit: 'Lifetime access'
+      },
+      {
+        id: '4',
+        benefit: 'Free updates'
+      },
+      {
+        id: '5',
+        benefit: 'Use on 1 (one) project'
+      },
+      {
+        id: '6',
+        benefit: '3 Months support'
+      },
+    ],
+    plan: 'teams',
+    btnTitle: 'professional',
+    popular: false
+  },
+];
+
+export const reviewers: Reviewers[] = [
+  {
+    id: '1',
+    review: 'SmartWallet has transformed the way I manage my digital assets. The secure storage and user-friendly interface make it a game-changer for someone like me who\'s invested in cryptocurrencies.',
+    image: 'avatar3',
+    name: 'Savannah Nguyen',
+    position: 'Marketing Coordinator'
+  },
+  {
+    id: '2',
+    review: 'I\'ve never felt so confident in a financial app before. The transparency, seamless transactions, and rewards programs make SmartWallet my go-to choice for managing my investments.',
+    image: 'avatar2',
+    name: 'Annette Black',
+    position: 'Medical Assistant'
+  },
+  {
+    id: '3',
+    review: 'As a newcomer to the world of crypto, SmartWallet\'s step-by-step guides and exceptional customer support helped me navigate the complexities effortlessly. It\'s a must-have for anyone looking to venture into digital assets.',
+    image: 'avatar1',
+    name: 'Marvin McKinney',
+    position: 'President of Sales'
+  },
+];
+
+const resources = [
+  {
+    id: 1,
+    link: 'Saas Development'
+  },
+  {
+    id: 2,
+    link: 'Our Products'
+  },
+  {
+    id: 3,
+    link: 'Our Products'
+  },
+  {
+    id: 4,
+    link: 'User Strategy'
+  },
+];
+
+const company = [
+  {
+    id: 4,
+    link: 'About Landio'
+  },
+  {
+    id: 5,
+    link: 'Contact & Support'
+  },
+  {
+    id: 6,
+    link: 'Success History'
+  },
+  {
+    id: 7,
+    link: 'Setting & Privacy'
+  },
+]
+
+const quickLinks = [
+  {
+    id: 9,
+    link: 'Premium Support'
+  },
+  {
+    id: 10,
+    link: 'Our Services'
+  },
+  {
+    id: 11,
+    link: 'Know Our Team'
+  },
+  {
+    id: 12,
+    link: 'Download App'
+  },
+]
+
+export const footerLinks = [
+  {
+    id: '1',
+    title: 'Resources',
+    links: resources,
+  },
+  {
+    id: '2',
+    title: 'Company',
+    links: company,
+  },
+  {
+    id: '3',
+    title: 'Quick Links',
+    links: quickLinks,
+  },
 ]
