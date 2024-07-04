@@ -61,27 +61,9 @@
         </div>
 
         <!-- newsletter -->
-        <div class="w-full py-12">
-          <div class="md:w-88% w-93% mx-auto">
-            <div class="text-center">
-              <h6 class="font-semibold text-16 text-pry">Newsletter</h6>
-              <h4 class="text-white font-bold text-40">Stay in the loop</h4>
-              <p class="text-grey2 text-14">
-                Receive exclusive offers, straight to your inbox. <br>
-                Don’t miss out - subscribe and join our community of business gurus.
-              </p>
-            </div>
-
-            <div class="py-5 md:w-[543px] mx-auto bg-[#1F2A37] px-5 mt-7 rounded-xl">
-              <TextInputBtn name="mail" input-id="mail" type="email" placeholder="Enter your email"
-                btn-title="Subscribe" v-model:value="email" />
-            </div>
-          </div>
-        </div>
-
-        <footer class="py-10 w-full bg-black2">
-          <LandingFooter />
-        </footer>
+        <NewsLetter />
+        <!-- footer -->
+        <LandingFooter />
       </div>
     </section>
   </main>
@@ -97,6 +79,7 @@ import { offers } from '@/components/landing/data.ts';
 import PricingPlan from '@/components/landing/PricingPlan.vue';
 import Reviews from '@/components/landing/Reviews.vue';
 import LandingFooter from '@/components/landing/LandingFooter.vue';
+import NewsLetter from '@/components/landing/NewsLetter.vue';
 
 const email = ref('')
 </script>
@@ -115,10 +98,5 @@ h1 {
   @media(min-width: 768px) {
     line-height: 0.6in;
   }
-}
-
-footer {
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
 }
 </style>

@@ -1,3 +1,5 @@
+import path from "path";
+
 export interface Offer {
   id: string;
   offer: string;
@@ -196,60 +198,72 @@ export const reviewers: Reviewers[] = [
   },
 ];
 
-const resources = [
+export const resources = [
   {
     id: 1,
-    link: 'Saas Development'
+    link: 'Saas Development',
+    path: '#'
   },
   {
     id: 2,
-    link: 'Our Products'
+    link: 'Our Products',
+    path: '#'
   },
   {
     id: 3,
-    link: 'Our Products'
+    link: 'Our Products',
+    path: '#'
   },
   {
     id: 4,
-    link: 'User Strategy'
+    link: 'User Strategy',
+    path: '#'
   },
 ];
 
-const company = [
+export const company = [
   {
     id: 4,
-    link: 'About Landio'
+    link: 'About Landio',
+    path: '#'
   },
   {
     id: 5,
-    link: 'Contact & Support'
+    link: 'Contact & Support',
+    path: '#'
   },
   {
     id: 6,
-    link: 'Success History'
+    link: 'Success History',
+    path: '#'
   },
   {
     id: 7,
-    link: 'Setting & Privacy'
+    link: 'Setting & Privacy',
+    path: '#'
   },
 ]
 
-const quickLinks = [
+export const quickLinks = [
   {
     id: 9,
-    link: 'Premium Support'
+    link: 'Premium Support',
+    path: '#'
   },
   {
     id: 10,
-    link: 'Our Services'
+    link: 'Our Services',
+    path: '#'
   },
   {
     id: 11,
-    link: 'Know Our Team'
+    link: 'Know Our Team',
+    path: '#'
   },
   {
     id: 12,
-    link: 'Download App'
+    link: 'Download App',
+    path: '#'
   },
 ]
 
