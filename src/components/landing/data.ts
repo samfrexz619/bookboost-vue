@@ -196,6 +196,20 @@ export const reviewers: Reviewers[] = [
     name: 'Marvin McKinney',
     position: 'President of Sales'
   },
+  {
+    id: '4',
+    review: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur obcaecati, pariatur iusto, consectetur explicabo numquam nesciunt ab voluptatum veniam possimus quam optio at deserunt vero dolorum, minus fuga dicta quo!',
+    image: 'avatar1',
+    name: 'Taylor Whyte',
+    position: 'President of Sales'
+  },
+  {
+    id: '5',
+    review: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur obcaecati, pariatur iusto, consectetur explicabo numquam nesciunt ab voluptatum veniam possimus quam optio at deserunt vero dolorum, minus fuga dicta quo!',
+    image: 'avatar1',
+    name: 'Marvin Frexzy',
+    position: 'President of Sales'
+  },
 ];
 
 export const resources = [
@@ -284,3 +298,4 @@ export const footerLinks = [
     links: quickLinks,
   },
 ]
+

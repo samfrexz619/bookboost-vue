@@ -1,21 +1,51 @@
 <template>
   <div class="w-full relative h-full">
     <div class="card-bg"></div>
-    <div class="w-full absolute top-8 flex gap-x-8 justify-between">
-      <ReviewCards v-for="reviewer in reviewers" :key="reviewer.id" :reviewer="reviewer" />
+    <div class="w-full absolute transition-all duration-300 top-8 flex gap-x-8 justify-between">
+      <ReviewCards v-for="reviewer in cards" :key="reviewer.id" :reviewer="reviewer" />
     </div>
-
-    <div class="py-10 w-full flex justify-center gap-x-2">
-      <button class="w-10 h-4 rounded-lg bg-pry"></button>
-      <button class="w-4 h-4 rounded-full bg-grey4"></button>
-      <button class="w-4 h-4 rounded-full bg-grey4"></button>
+    <!-- indicators -->
+    <div class="flex justify-center gap-x-2 py-10">
+      <button v-for="(_, idx) in cards" :key="idx"
+        :class="[currSlide === idx ? 'bg-pry w-10 rounded-lg' : 'bg-grey4 w-4 rounded-full']"
+        class="h-4 transition-all duration-500"></button>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+import { ref, computed, onMounted, onBeforeMount } from 'vue';
 import ReviewCards from '../ui/cards/ReviewCards.vue';
 import { reviewers } from '../landing/data.ts'
+
+const currSlide = ref(0)
+
+let slideInterval = ref()
+
+const cards = computed(() => {
+  return reviewers.slice(currSlide.value, currSlide.value + 3)
+})
+
+// const handlePrev = () => {
+//   currSlide.value = (currSlide.value - 1 + reviewers.length) % (reviewers.length)
+
+// }
+const handleNext = () => {
+  currSlide.value = (currSlide.value + 1) % (reviewers.length)
+  if (currSlide.value > reviewers.length - 3) {
+    currSlide.value = 0
+  }
+}
+
+onMounted(() => {
+  slideInterval.value = setInterval(() => {
+    handleNext()
+  }, 5000)
+})
+
+onBeforeMount(() => {
+  clearInterval(slideInterval.value)
+})
 </script>
 
 <style scoped>
